@@ -7,11 +7,11 @@ int main(){
     scanf("%c",&ch);
     printf("%c\n",ch); 
      
-   scanf("%s",str);
-   printf("%s",str);
+    scanf("%s",str);
+    printf("%s",str);
    
-   scanf("%[^@]s",sen);//it reads upto @ value
-   printf("%s",sen);
-
-return 0;
+    scanf("%[^@]s",sen);//it reads upto @ value
+    printf("%s",sen);
+    
+    return 0;
 }
