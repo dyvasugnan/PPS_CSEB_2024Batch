@@ -1,4 +1,4 @@
-//sum and average of three numbers
+//Displaying months and days
 #include<stdio.h>
 int main(){
 int num, months, days;
