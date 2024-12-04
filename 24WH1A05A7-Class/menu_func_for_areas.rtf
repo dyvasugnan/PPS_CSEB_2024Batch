@@ -1,1 +1,63 @@
-
+//menu driven function for areas
+#include<stdio.h>
+#include<stdlib.h>
+float circlearea(float);
+float rectarea(float, float);
+float triarea(float, float);
+int main(){
+    int ch;
+    char c;
+    float rad, len, wid, base, height, area1, area2, area3;
+    do{
+       printf("MENU \n 1. AREA OF CIRCLE \n 2. AREA OF RECTANGLE \n 3. AREA OF TRIANGLE \n 4. EXIT \n Enter your choice: ");
+       scanf("%d", &ch);
+       switch(ch){
+            case 1:
+            printf("Enter radius of circle: ");
+            scanf("%f", &rad);
+            area1 = circlearea(rad);
+            printf("Area of circle is %f",area1);
+            break;
+            
+            case 2: 
+            printf("Enter length and width: ");
+            scanf("%f%f", &len, &wid);
+            area2 = rectarea(len, wid);
+            printf("Area of rectangle is %f", area2);
+            break;
+            
+            case 3:
+            printf("Enter base and height: ");
+            scanf("%f%f", &base, &height);
+            area3 = triarea(base, height);
+            printf("Area of triangle is %f", area3);
+            break;
+            
+            case 4:
+            exit(0);
+            
+            default:
+            printf("Invalid choice");
+        }
+        
+        printf("\nDo you want to continue?(y/n): ");
+        scanf("\n%c", &c);
+    }
+    while(c == 'y');
+    return 0;
+}
+float circlearea(float r){
+    float area1, pi = 3.14;
+    area1 = pi * r * r;
+    return area1;
+}
+float rectarea(float l, float w){
+    float area2;
+    area2 = l * w;
+    return area2;
+}
+float triarea(float b, float h){
+    float area3;
+    area3 = 0.5 * b * h;
+    return area3;
+}
