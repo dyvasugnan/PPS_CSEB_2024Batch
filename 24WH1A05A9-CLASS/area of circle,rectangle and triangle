@@ -1,0 +1,47 @@
+#include <stdio.h>
+float areacircle(float);
+float arearectangle(float,float);
+float areatriangle(float,float);
+    int main() {
+    int choice;
+    float radius, length, breadth, base, height;
+    printf("Choose a number to calculate its area:\n");
+    printf("1. Circle\n");
+    printf("2. Rectangle\n");
+    printf("3. Triangle\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            printf("Enter the radius of the circle: ");
+            scanf("%f", &radius);
+            printf("The area of the circle is: %.2f\n", areacircle(radius));
+            areacircle(radius);
+            break;
+        case 2:
+            printf("Enter the length and breadth of the rectangle: ");
+            scanf("%f %f", &length, &breadth);
+            printf("The area of the rectangle is: %.2f\n", arearectangle(length, breadth));
+            arearectangle(length,breadth);
+            break;
+        case 3:
+            printf("Enter the base and height of the triangle: ");
+            scanf("%f %f", &base, &height);
+            printf("The area of the triangle is: %.2f\n", areatriangle(base, height));
+            areatriangle(base,000000height);
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+    return 0;
+}
+
+float areacircle(float radius) {
+    return 3.14 * radius * radius;
+}
+float arearectangle(float length, float breadth) {
+    return length * breadth;
+}
+float areatriangle(float base, float height) {
+    return 0.5 * base * height;
+}
