@@ -1,0 +1,35 @@
+#include<stdio.h>
+int findSmallest(int[],int);
+int findLargest(int[],int);
+int main() {
+int arr[10],i;
+int n=sizeof(arr)/sizeof(arr[0]);
+    printf("Enter the elements of the array:\n",n);
+    for (i = 0; i < n; i++) {
+        scanf("%d",&arr[i]);
+}
+    int smallest = findSmallest(arr,n);
+    int largest = findLargest(arr,n);
+
+    printf("The smallest element in the array is: %d\n",smallest);
+    printf("The largest element in the array is: %d\n",largest);
+     return 0;
+}
+int findSmallest(int arr[],int n) {
+    int smallest = arr[0],i;
+    for (i = 1; i < n; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+}
+}
+    return smallest;
+}
+int findLargest(int arr[],int n) {
+    int largest = arr[0],i;
+    for (i = 1; i < n; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+}
+}
+    return largest;
+}
