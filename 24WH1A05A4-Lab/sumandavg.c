@@ -11,7 +11,7 @@ for(i=0;i<n;i++){
 }
  x = sumandavg(a,n);
   printf("sum=%d",x);
-  printf("avg=%d",x/n);
+  printf("avg=%f",x/n);
  return 0;
 }
 int sumandavg(int a[],int n){
