@@ -4,7 +4,7 @@
 bool isPalindrome(char [ ]);
 int main() {
     char str[ ]="aba";
-    char ch;
+    bool ch;
     ch=isPalindrome(str);
     if(ch)
         printf("given string is palindrome");
@@ -16,8 +16,9 @@ bool isPalindrome(char str [ ]) {
     int len,i;
     len=strlen(str);
     for(i=0; i<len/2; i++)
-        if(str[i]==str[len-i-1])
-            return true;
-        else
+        if(str[i]!=str[len-i-1])
             return false;
+            return true;
+    
+            
 }
