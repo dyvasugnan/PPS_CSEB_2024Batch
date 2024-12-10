@@ -1,0 +1,25 @@
+// largest prime factor for any given number
+#include <stdio.h>
+
+int main() {
+    int num, largPrime = 0;
+    printf("Enter number: ");
+    scanf("%d", &num);
+    while(num % 2 == 0){
+        largPrime=2;
+        num = num/2;
+    }
+
+    for (int i = 3; i <= num; i+=2) {
+        while (num % i == 0) {
+            largPrime = i;
+            num /= i;
+        }
+    }
+    if (num > 2) {
+        largPrime = num;
+    }
+
+    printf("Largest prime factor is: %d\n", largPrime);
+    return 0;
+}
