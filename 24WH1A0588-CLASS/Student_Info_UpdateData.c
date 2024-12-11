@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<ctype.h>
 struct student{
-    char name[50];
+    char name[20];
     int age;
     }s1;
     struct student UpdateData(struct student);
