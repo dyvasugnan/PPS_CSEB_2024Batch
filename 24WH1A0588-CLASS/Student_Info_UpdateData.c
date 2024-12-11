@@ -6,7 +6,7 @@ struct student{
     }s1;
     struct student UpdateData(struct student);
     int main(){
-        printf("Enter the students name: \n");
+        printf("Enter the student's name: \n");
         scanf("%s",s1.name);
         printf("Enter the student's age :\n");
         scanf("%d",&s1.age);
