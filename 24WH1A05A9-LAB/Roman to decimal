@@ -1,0 +1,36 @@
+//convert a roman numeral to its decimal equivalent
+#include<stdio.h>
+#include<string.h>
+	int main(){
+	char roman[20];
+	int len,i,k;
+	int decimal=0,romanvalue;
+	printf("Enter the roman numericals");
+	scanf("%s",roman);
+	len = strlen(roman);
+	for(i=0;i<=len-1;i++){
+		if(roman[i]=='I')
+		romanvalue=1;
+		else if(roman[i]=='V')
+		romanvalue=5;
+		else if(roman[i]=='X')
+		romanvalue=10;
+		else if(roman[i]=='L')
+		romanvalue=50;
+		else if(roman[i]=='C')
+		romanvalue=100;
+		else if(roman[i]=='D')
+		romanvalue=500;
+		else if(roman[i]=='M')
+		romanvalue=1000;
+		else
+		printf("invalid character");
+		}
+		if(romanvalue<roman[i-1])
+		decimal-=romanvalue;
+		else
+		decimal+=romanvalue;
+		printf("decimal is %d",decimal);
+		return 0;
+		}
+		
