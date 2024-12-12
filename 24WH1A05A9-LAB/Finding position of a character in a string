@@ -1,0 +1,17 @@
+//display position of character ch in string
+#include<stdio.h>
+#include<string.h>
+	int main(){
+	char s[20],ch;
+	int i;
+	printf("Enter char to be searched\n");
+	scanf("%c",&ch);
+	printf("Enter string\n");
+	scanf("%s",s);
+	for(i=0;s[i]!='\0';i++){
+	if(s[i]==ch)
+	printf("Ch is found in i:%d",i+1);
+	
+	}
+	return 0;
+	}
