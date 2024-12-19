@@ -1,20 +1,17 @@
-//to find gcd of a number using fuction
 #include<stdio.h>
 int gcd(int,int);
 int main(){
-	int num1,num2,res;
-	printf("enter two numbers");
-	scanf("%d%d",&num1,&num2);
-	res=gcd(num1,num2);
-	printf("%d",res);
-	return 0;
+int num1,num2;
+printf("enter any two numbers");
+scanf("%d %d",&num1,&num2);
+printf("the gcd of %d and %d is %d",num1,num2,gcd(num1,num2));
+return 0;
 }
-int gcd(int n1,int n2){
-	int temp;
-	while(n2!=0){
-	temp=n2;
-	n2=n1%n2;
-	n1=temp;
-    }
-    return n1;
+int gcd(int num1,int num2){
+if(num2==0){
+    return num1;
+}
+else{
+    return gcd(num2,num1%num2);
+ }
 }
