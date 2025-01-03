@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int num,num1,rem,sum=0;
+    printf("\n enter num value:");
+    scanf("%d",&num);
+    num1=num;
+    while(num1>0)
+    {
+        rem=num1%10;
+        sum=sum+rem*rem*rem;
+        num1=num1/10;
+    }
+    if(sum==num)
+    {
+        printf("amstrong number");
+    }
+    else
+    {
+        printf("not a amstrong number");
+    }
+    return 0;
+}
