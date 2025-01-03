@@ -1,0 +1,31 @@
+//this is standard deviation program
+#include<stdio.h>
+#include<math.h>
+int main(){
+int a[20],n,i,mean,variance=0,square_difference=0;
+int std_deviation,sum=0,diff;
+printf("enter size of elements");
+scanf("%d",&n);
+printf("enter array elements");
+for(i=0;i<n;i++){
+scanf("%d",&a[i]);
+}
+printf("entered elements\n");
+for(i=0;i<n;i++){
+    printf("%d ",a[i]);
+}
+for(i=0;i<n;i++){
+    sum=sum+a[i];
+}
+mean=sum/n;
+printf("\n mean =%d\n",mean);
+for(i=0;i<n;i++){
+    diff=mean-a[i];
+    square_difference=(square_difference+pow(diff,2));
+}
+variance=square_difference/n;
+printf("variance=%d\n",variance);
+std_deviation=sqrt(variance);
+printf("std_deviation =%d\n",std_deviation);
+return 0;
+}
