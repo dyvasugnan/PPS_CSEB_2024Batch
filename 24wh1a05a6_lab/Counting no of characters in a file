@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+
+{
+
+if (argc != 3) {
+
+printf("Usage: %s <filename> <character>\n", argv[0]);
+
+}
+
+FILE *file = fopen(argv[1], "r");
+
+if (file == NULL) {
+
+printf("Error opening file: %s\n", argv[1]);
+
+}
+
+char targetChar = argv[2][0];
+
+int charCount = 0;
+
+char currentChar;
+
+while ((currentChar = fgetc(file)) != EOF)
+
+{
+
+(currentChar == targetChar)
+
+{
+
+charCount++;
+
+}
+
+}
+
+fclose(file);
+}
+
+printf("The character '%c' occurs %d times in the file %s\n", targetChar,
+
+charCount, argv[1]);
+
