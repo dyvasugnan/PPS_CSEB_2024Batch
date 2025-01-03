@@ -1,0 +1,20 @@
+//Happy number
+#include<stdio.h>
+int main(){
+int n,sum=0,r,temp;
+   scanf("%d",&n);
+   temp=n;
+    while(n>0){
+        r=n%10;
+        sum=sum+r*r;
+        n=n/10;
+        if(n==0 && sum>9){
+        n=sum;
+        sum=0;
+        }
+}
+if(sum==1)
+printf("true");
+else printf("false");
+ return 0;
+}
