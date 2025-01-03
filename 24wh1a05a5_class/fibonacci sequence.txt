@@ -1,4 +1,4 @@
-// fibnocci series
+// fibonacci sequence
 #include <stdio.h>
 int main() {
    int t0 =0,t1 = 1;
