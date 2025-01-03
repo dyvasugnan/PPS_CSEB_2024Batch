@@ -39,3 +39,11 @@ int position = findPosition(inputString, searchChar);
 if (position != -1) {
 
 printf("The character '%c' is found at position %d in the string.\n", searchChar, position);
+}
+else {
+
+printf("The character '%c' is not found in the string.\n", searchChar);
+
+}
+
+}
