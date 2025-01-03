@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+
+char text[1000];
+
+int lines = 0, words = 0, characters = 0;
+
+char ch;
+
+printf("Enter some text (Ctrl+D to end on Unix/Linux, Ctrl+Z on Windows):\n");
+
+while ((ch = getchar()) != EOF) {
+
+characters++;
+
+if (ch == '\n') {
+
+lines++;
+
+}
+
+if (isspace(ch)) {
+
+words++;
+
+}
+
+}
+
+if (characters > 0) {
+
+words++;
+
+}
+
+printf("\n");
+
+printf("Lines: %d\n", lines);
+printf("Words: %d\n", words);
+
+printf("Characters: %d\n", characters);
+}
