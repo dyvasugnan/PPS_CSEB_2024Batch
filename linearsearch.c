@@ -1,30 +1,23 @@
 #include<stdio.h>
-void linear_search(int[],int);
 int main(){
-int arr[5];
-int linear_num;
-int i;
-printf("enter elements in array:");
-for(i=0;i<5;i++){
-      scanf("%d",&arr[i]);
-}
-printf("enter the linear number");
-scanf("%d",&linear_num);
-
-    for(i=0;i<5;i++){
-       if(arr[i]==linear_num){
-           break;
-        }
-       else{
-        continue;
-       }
+    int size,arr[50],n;
+    int i,j;
+    printf("enter size of array \n");
+    scanf("%d",&size);
+    printf("enter the no you want to search\n");
+    scanf("%d",&n);
+    printf("enter the elements of array\n");
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
     }
-
-if(arr[i]==linear_num){
-                    printf("The array have the same number as linear number");
-        }
-else{
-    printf("The array does not have the same number as linear number");
+    for(j=0;j<size;j++){
+        if(n==arr[j]){
+            printf("the required no %d is found at %d index",n,j);
+          return 0;  }
   }
-return 0;
+    if(n!=arr[j]){
+          printf("the element not found");   
+           }
+          return 0;
 }
+    
