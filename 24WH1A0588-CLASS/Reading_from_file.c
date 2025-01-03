@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    FILE *fptr;
+    FILE *fp;
     char line[100];
 
-    fptr = fopen("my_file.txt", "r"); 
+    fp = fopen("my_file.txt", "r"); 
 
-    if (fptr == NULL) {
+    if (fp == NULL) {
         printf("Error opening file!\n");
         exit(1);
     }
 
-    while (fgets(line, 100, fptr) != NULL) {
+    while (fgets(line, 100, fp) != NULL) {
         printf("%s", line); 
     }
 
-    fclose(fptr);
+    fclose(fp);
 
     return 0;
 }
