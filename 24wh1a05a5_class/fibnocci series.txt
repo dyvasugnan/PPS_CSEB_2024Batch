@@ -1,0 +1,15 @@
+// fibnocci series
+#include <stdio.h>
+int main() {
+   int t0 =0,t1 = 1;
+   int nextterm,i,n =10;
+    for(i = 0;i< n; i++){
+     nextterm = t0 + t1;
+     t0 = t1;
+     t1 = nextterm;
+   printf("%d ",nextterm);
+        
+        
+    }
+    return 0;
+}
