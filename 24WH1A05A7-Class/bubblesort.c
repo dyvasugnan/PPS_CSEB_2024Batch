@@ -1,6 +1,6 @@
 //bubble sort without recursion
 #include<stdio.h>
-void bubblesort(int a[], int);
+void bubblesort(int [], int);
 void swap(int*, int*);
 int main(){
     int n, arr[200], i;
