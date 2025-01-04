@@ -3,7 +3,7 @@ void bubbleSort (int [],int);
 void swap(int*,int*);
 int main(){
     int arr[50],n,i;
-    printf("enter no of elements in array req:");
+    printf("enter no of elements to be printed:");
     scanf("%d",&n);
     printf("enter the elements: ");
     for(i=0;i<n;i++)
@@ -34,4 +34,4 @@ void swap(int *n1,int *n2){
      temp=*n1;
      *n1=*n2;
      *n2=temp;
-}S
+}
