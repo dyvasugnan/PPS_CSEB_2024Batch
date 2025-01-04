@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+int n;
+printf("Enter the size of the array");
+scanf("%d",&n);
+int i,a[n];
+printf("Enter the elements of array");
+for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+}
+float sum=0.0;
+for(int i=0;i<n;i++){
+  sum=sum+a[i];
+}
+float mean,variance,st_deviation,den_var=0;
+mean=sum/n;
+for(i=0;i<n;i++){
+    den_var=den_var+((a[i]-mean)*(a[i]-mean));
+}
+variance=(den_var)/(n-1);
+st_deviation=sqrt(variance);
+printf("The mean of the given data is %.2f",mean);
+printf("The variance of the given data is %.2f",variance);
+printf("The standard deviation of the given data is %.2f",st_deviation);
+return 0;
+}
