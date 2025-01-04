@@ -1,4 +1,4 @@
-//calculating x factorial value
+//calculating x fractional  value
 #include<stdio.h>
 #include<math.h>
 int main(){
