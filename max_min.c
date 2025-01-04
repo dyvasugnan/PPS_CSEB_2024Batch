@@ -1,39 +1,21 @@
+//max and min of array
 #include<stdio.h>
-int largest_num(int[]);
-int smallest_num(int[]);
 int main(){
-int max,min;
-printf("The largest number in the array is:%d\n",largest_num(max));
-printf("The smallest number in the array is:%d\n",smallest_num(min));
-return 0;
-}
-int largest_num(int max){
-    int arr[5],i;
-for(i=0;i<5;i++){
-      scanf("%d",&arr[i]);
-}
-int max=arr[0];
-for(i=1;i<5;i++){
-   if(arr[i]>max){
-    max=arr[i];
-}
-   else{
-     continue;
-}
-}
-   return max;
-}
-int smallest_num(int min){
-      int arr[5],i;
-   for(i=0;i<5;i++){
-      scanf("%d",&arr[i]);
-   }
-int min=arr[0];
-   for(i=1;i<5;i++){
-      if(arr[i]<min){
-           min=arr[i];
+    int a[100];
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int max=a[0],min=a[0];
+  for(int i=0;i<n;i++){
+    if(a[i]>max){
+        max=a[i];
+    }
+    if(a[i]<min){
+        min=a[i];
+    }
   }
-       else{
-         continue;
-}
-
+  printf("max=%d \n min=%d ",max,min);
+ return 0;
+ }
