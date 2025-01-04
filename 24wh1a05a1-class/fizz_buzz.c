@@ -1,0 +1,21 @@
+//fizzbuzz
+#include<stdio.h>
+int main(){
+    int i,n;
+    printf("enter the range");
+    scanf("%d",&n);
+    for(i=1;i<=20;i++){
+        if(i%3==0 && i%5==0){
+            printf("fizz buzz \n");
+        }
+          elseif(i%3==0){
+            printf("fizz \n");
+        }
+        elseif(i%5==0){
+            printf("buzz \n");
+        }
+         else{
+            printf("%d \n",i);
+         }}
+         return 0;
+}
