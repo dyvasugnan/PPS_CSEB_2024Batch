@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include<string.h>
+void encrypt(char text1[],int shift,int len){
+    int i;
+    for(i=0;i<len;i++){
+        if(text1[i]=='z'||text1[i]=='Z')
+        printf("%c" ,text1[i]-26+shift);
+        else
+        printf("%c",text1[i]+shift);
+    }
+}
+void decrypt(char text2[],int shift,int len){
+    int i;
+    for(i=0;i<len;i++){
+        if(text2[i]=='z'||text2[i]=='Z')
+        printf("%c",text2[i]-26-shift);
+        else
+        printf("%d",text2[i]-shift);
+    }
+}
+
+int main()
+{
+    char text[50];
+    int shift,chioce,len;
+    printf("enter the text\n");
+    scanf("%s",text);
+    len=strlen(text);
+    printf("enter any value you want to shift each character in the text\n");
+    scanf("%d",&shift);
+    printf("if you eant encrypt enter the positive number or you want decrypt enter the negative number\n");
+    scanf("%d",&chioce);
+    if(chioce>0)
+    encrypt (text,shift,len);
+    else
+    decrypt(text,shift,len);
+    
+    
+}
